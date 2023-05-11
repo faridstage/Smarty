@@ -1,4 +1,5 @@
 using API.Dtos;
+using API.Errors;
 using AutoMapper;
 using Core.Entities;
 using Core.Interfaces;
@@ -9,9 +10,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class MarksController : ControllerBase
+    public class MarksController : BaseApiController
     {
         private readonly IGenericRepository<Mark> _markRepo;
         private readonly IGenericRepository<MarkBrand> _markBrandRepo;
@@ -36,10 +35,14 @@ namespace API.Controllers
         }
 
         [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]
         public async Task<ActionResult<MarkToReturnDto>> GetMark(int id)
         {
             var spec = new MarksWithTypesAndBrandsSpecification(id);
             var mark = await _markRepo.GetEntityWithSpec(spec);
+
+            if (mark == null) return NotFound(new ApiResponse(400));
 
             return _mapper.Map<Mark, MarkToReturnDto>(mark);
         }
