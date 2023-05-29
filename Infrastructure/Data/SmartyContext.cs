@@ -6,7 +6,7 @@ namespace Infrastructure.Data
 {
     public class SmartyContext : DbContext
     {
-        public SmartyContext(DbContextOptions options) : base(options)
+        public SmartyContext(DbContextOptions<SmartyContext> options) : base(options)
         {
 
         }
