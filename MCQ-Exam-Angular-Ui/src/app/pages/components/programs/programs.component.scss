@@ -1,0 +1,75 @@
+.bg-lightGreen{
+    background-color: #f3fff2;
+}
+.route{
+    background-color: #f3fff2;
+}
+
+/* ***************************************************start programs section ****************************************************/
+.prog{
+    background-color: #fff;
+}
+
+.programes .prog{
+    padding:1.25rem !important;
+    transition: transform 0.3s;
+}
+.prog-icon{
+    fill: rgb(0,126,255);
+}
+.prog-icon-container{
+    height: 70px !important ;
+    width: 70px !important ;
+}
+.prog-icon-path{
+    stroke: rgb(0,126,255); 
+    fill: #fff;
+}
+.prog:hover{
+    transform: translateY(-1rem);
+}
+.prog:hover .prog-icon-container{
+    background-color: #22d836;
+    border-color: #22d836 !important;
+}
+.prog:hover .prog-icon{
+    fill: #fff;
+}
+.prog:hover .prog-icon-path{
+    stroke: #fff !important;
+    fill:#22d836 !important;
+    font-weight: 300;
+}
+/* ***************************************************end programs section ****************************************************/
+/* ***************************************************start invitation ssection********************************************** */
+.invitation{
+    background-image: url(../../../../assets/images/bg1.jpg);
+    background-size: cover;
+    background-position:center  center ;
+    
+}
+.invitation-btn{
+    color: #fff ;
+     border-radius:12px 30px;
+     width: 15%;
+     background:transparent;
+     border: 2px solid #22d836;
+     font-size: 1.3rem;
+}
+.invitation-btn:hover{
+    background-color:#22d836;
+    color: rgb(0,126,255);
+}
+
+@media only screen and (max-width:1000px) {
+    .invitation-btn{ 
+     width: 25%;
+    }
+}
+@media only screen and (max-width:768px) {
+    .invitation-btn{ 
+     width: 35%;
+    }
+}
+
+/* ***************************************************start invitation ssection********************************************** */
