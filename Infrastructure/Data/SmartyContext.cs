@@ -1,5 +1,6 @@
 using System.Reflection;
 using Core.Entities;
+using Core.Entities.Test;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Data
@@ -13,6 +14,9 @@ namespace Infrastructure.Data
         public DbSet<Mark> Marks { get; set; }
         public DbSet<MarkType> MarkTypes { get; set; }
         public DbSet<MarkBrand> MarkBrands { get; set; }
+        public DbSet<Subject> Subjects { get; set; }
+        public DbSet<Answer> Answers { get; set; }
+        public DbSet<Question> Questions { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
