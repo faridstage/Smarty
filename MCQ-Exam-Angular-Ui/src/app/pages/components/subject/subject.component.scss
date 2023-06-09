@@ -1,0 +1,96 @@
+
+.card-line{
+    width: 80%;
+    height: 1px;
+    background-color: #a1a1a1;
+    margin: auto;
+}
+.class-details{
+    font-size: .9rem;
+}
+.class-details .hover{
+    position: absolute;
+    background-color: #22d836;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    transition: transform 0.5s;
+    font-weight: 600;
+    border-radius: 0.5rem;
+}
+.class-details .hover a{
+    color: white; 
+    text-decoration: none;
+}
+.card:hover .hover{
+    transform: translateY(0%);
+}
+.programs .card-title a:hover{
+    color:#22d836  !important
+}
+.card-body{
+    color: #595959;
+}
+
+@media only screen and (max-width:768px) {
+    .programs .card-title{
+    font-size: 1rem;
+    }
+    .programs .card-body{
+    font-size: 0.9rem;
+    }
+    .programs .class-details{
+    font-size: 0.8rem;
+    }
+}
+@media only screen and (max-width:768px) {
+    .programs .container{
+    width: 85%;
+    }
+}
+/////////////////////////////////////////////////////////////
+.bg-main{
+    background-color: #22d836 !important;
+}
+.nav-link{
+    font-weight: 400 !important;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #fff ;
+    background-color: transparent ;
+    border-color: transparent
+}
+.nav-tabs .nav-link:hover {
+    border-color: transparent;
+}
+@media only screen and (max-width:768px) {
+    .programs .row{
+        padding: 50px;
+    }
+    .programs nav button{
+        font-size: 1rem !important;
+        background-color: #22d836;
+        border-radius: 30px !important;
+        color: black;
+        margin: 5px;
+        text-align:left;
+    }
+    .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+        color: #fff ;
+        background-color: #22d836;
+        border-color: transparent
+    }
+    .programs  nav > div{
+        flex-direction: column !important;
+        background-color: #fff !important;
+    }
+}
+
+
+/* ****************** end programs section *******************************/

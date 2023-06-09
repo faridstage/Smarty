@@ -1,0 +1,94 @@
+
+/* ****************************************start play-learn section ********************* */
+.play-learn{
+    background-color: #f3fff2;
+}
+.play-learn h2{
+    color:rgb(0,126,255) ;
+}
+@media only screen and (max-width: 768px) {
+   .about-img{
+    display: none;
+   }
+   .play-learn p{
+    padding-bottom: 15px;
+   }
+}
+
+/* ****************************************end play-learn section *********************** */
+
+/* ****************************************start Platform-capabilities section ********** */
+.Platform-capabilities{
+    background-image: url(../../../../assets/images/bg7.jpg) ;
+    background-size: cover;
+    background-position: center center;
+}
+
+.Platform-capabilities p{
+    color: rgb(174, 255, 0);
+}
+.cls-1 {
+  stroke: #f66;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3px;
+  fill: none;
+  fill-rule: evenodd;
+}
+.cls-1, .cls-2 {
+    stroke: #f66;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3px;
+    fill: none;
+  }
+
+  .cls-1 {
+    fill-rule: evenodd;
+  }
+  .Platform-capabilities .counter{
+    font-size: 100px !important;
+    font: 400 0px Roboto, "Helvetica Neue", sans-serif;
+    color: #fff;
+  }
+/* ****************************************end Platform-capabilities section ************ */
+/*****************************************start coure values section***********************/
+.CoreValuse h3 {
+  font-size: 1.4rem ;
+}
+.value-explination{
+  font-size: 1.1rem;
+  color: #333333;
+}
+.value-explination h3::after{
+  content: " ";
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  border-radius: 5px;
+  background-color: #22d836;
+  left: 0;
+  bottom: 0;
+}
+@media only screen and (min-width: 1200px) {
+  .w-lg-75{
+  width: 75% !important;
+  }
+}
+/*****************************************end coure values section*************************/
+ /*************************************************** start companies part *******************/
+ .companies{
+    background-color: #f3fff2;
+  }
+  /*************************************************** end companies part *********************/
+/* ****************************************start cirtifications section ********************** */
+   
+    @media only screen and (max-width: 768px) {
+        
+        .cirtfication img{
+            width: 70% !important;
+        }
+
+    }
+ 
+/* ****************************************end cirtifications section ************************ */
