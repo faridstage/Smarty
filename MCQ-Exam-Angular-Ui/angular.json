@@ -34,12 +34,22 @@
               "src/assets"
             ],
             "styles": [
+<<<<<<< HEAD:MCQ-Exam-Angular-Ui/angular.json
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.css",
               "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css",
               "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.theme.default.min.css",
               "node_modules/bootstrap/scss/bootstrap.scss",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+=======
+              "node_modules/@fortawesome/fontawesome-free/css/all.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
+              "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css",
+              "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.theme.default.min.css",
+              "node_modules/ngx-toastr/toastr.css",
+              "node_modules/ngx-spinner/animations/pacman.css",
+>>>>>>> bf5af0f2310239cad5f39dee314e83840e43c107:client/angular.json
               "src/styles.scss"
             ],
             "scripts": [
@@ -48,6 +58,12 @@
           },
           "configurations": {
             "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
               "budgets": [
                 {
                   "type": "initial",
@@ -81,6 +97,14 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+<<<<<<< HEAD:MCQ-Exam-Angular-Ui/angular.json
+=======
+          "options": {
+            "ssl": true,
+            "sslCert": "ssl/localhost.pem",
+            "sslKey": "ssl/localhost-key.pem"
+          },
+>>>>>>> bf5af0f2310239cad5f39dee314e83840e43c107:client/angular.json
           "configurations": {
             "production": {
               "browserTarget": "calculator:build:production"
@@ -119,5 +143,12 @@
       }
     }
   },
+<<<<<<< HEAD:MCQ-Exam-Angular-Ui/angular.json
   "defaultProject": "calculator"
 }
+=======
+  "cli": {
+    "analytics": "8765ca2d-306e-41de-9969-02bb6e3a5f32"
+  }
+}
+>>>>>>> bf5af0f2310239cad5f39dee314e83840e43c107:client/angular.json

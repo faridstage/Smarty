@@ -1,0 +1,67 @@
+
+/* ****************************************start play-learn section ********************* */
+.play-learn{
+    background-color: #f3fff2;
+}
+.play-learn h2{
+    color:rgb(0,126,255) ;
+}
+@media only screen and (max-width: 768px) {
+   .about-img{
+    display: none;
+   }
+   .play-learn p{
+    padding-bottom: 15px;
+   }
+}
+
+/* ****************************************end play-learn section *********************** */
+/* ****************************************start Platform-capabilities section ********** */
+.Platform-capabilities{
+    background-image: url(../../assets/images/bg7.jpg) ;
+    background-size: cover;
+    background-position: center center;
+}
+.Platform-capabilities p{
+    color: rgb(174, 255, 0);
+}
+.cls-1 {
+  stroke: #f66;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3px;
+  fill: none;
+  fill-rule: evenodd;
+}
+.cls-1, .cls-2 {
+    stroke: #f66;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3px;
+    fill: none;
+  }
+
+  .cls-1 {
+    fill-rule: evenodd;
+  }
+  .Platform-capabilities .counter{
+    font-size: 100px !important;
+    color: #fff;
+  }
+/* ****************************************end Platform-capabilities section ************ */
+ /*************************************************** start companies part *******************/
+ .companies{
+    background-color: #f3fff2;
+  }
+  /*************************************************** end companies part *********************/
+/* ****************************************start cirtifications section ********************** */
+   
+    @media only screen and (max-width: 768px) {
+        
+        .cirtfication img{
+            width: 70% !important;
+        }
+
+    }
+ 
+/* ****************************************end cirtifications section ************************ */

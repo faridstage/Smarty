@@ -4,7 +4,11 @@
     <title>logo-kindergarten</title>
     <desc>Created with Sketch.</desc>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+<<<<<<< HEAD:MCQ-Exam-Angular-Ui/src/assets/images/logo-dark.svg
         <g id="logo-kindergarten" transform="translate(0.000000, -1.000000)" fill="#007EFF" fill-rule="nonzero">
+=======
+        <g id="logo-kindergarten" transform="translate(0.000000, -1.000000)" fill="#FF9C00" fill-rule="nonzero">
+>>>>>>> bf5af0f2310239cad5f39dee314e83840e43c107:client/src/assets/images/logo-dark.svg
             <path d="M41.035,51.461 C41.035,46.788 37.226,43 32.528,43 C27.829,43 24.021,46.788 24.021,51.461 C24.021,56.134 24.021,65 24.021,65 L32.528,56.538 L41.035,65 C41.035,65 41.035,56.134 41.035,51.461 Z" id="Path"></path>
             <path d="M20.231,49.792 C24.287,47.452 25.676,42.27 23.334,38.217 C20.993,34.165 15.806,32.777 11.75,35.116 C7.694,37.456 0,41.895 0,41.895 L11.584,44.996 L8.48,56.57 C8.48,56.57 16.175,52.131 20.231,49.792 Z" id="Path"></path>
             <path d="M11.73,30.899 C15.779,33.234 20.956,31.848 23.294,27.803 C25.631,23.757 24.244,18.584 20.195,16.249 C16.146,13.913 8.465,9.483 8.465,9.483 L11.564,21.036 L0,24.132 C0,24.132 7.681,28.563 11.73,30.899 Z" id="Path"></path>
