@@ -1,7 +1,8 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { ReplaySubject, Subject } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { User } from 'src/app/shared/interfaces/user';
 
 @Injectable({
   providedIn: 'root'
@@ -10,16 +11,18 @@ export class AuthService {
 
   constructor(private http:HttpClient) { }
   user = new Subject()
+ 
   createUser(model:any) {
     return this.http.post(environment.baseApi+'students' , model)
   }
 
-  login(model:any) {
-    return this.http.put(environment.baseApi+'login/1' , model)
+
+  login(model:any){
+    return this.http.post<User>(environment.baseApi+'Account/login',model);
   }
 
+
   getUsers(type:string){
-    console.log(environment.baseApi+type)
     return this.http.get(environment.baseApi+type)
   }
 
@@ -30,6 +33,11 @@ export class AuthService {
     return this.http.put(environment.baseApi+"students/"+id , model)
   }
   getRole() {
-    return this.http.get(environment.baseApi+'login/1')
+    let email= localStorage.getItem('email');
+    if(email === '' )
+    return 
   }
+
+
+  
 }

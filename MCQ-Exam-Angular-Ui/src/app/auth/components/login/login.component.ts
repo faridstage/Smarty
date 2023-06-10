@@ -14,12 +14,15 @@ export class LoginComponent implements OnInit {
 
   loginForm!:FormGroup;
   users:any[]= [];
-  type:string = "students"
+  type:string = "student";
+  credendials:any={
+    email:'',
+    password:''
+  }
   constructor(private fb:FormBuilder ,private service:AuthService  , private router:Router , private toaster:ToastrService) { }
 
   ngOnInit(): void {
-    this.getUsers();
-    console.log(this.users)
+    // this.getUsers();
     this.createForm()
   }
 
@@ -33,46 +36,33 @@ export class LoginComponent implements OnInit {
 
   getRole(event:any) {
     this.type = event.value
-    this.getUsers()
+    // this.getUsers()
   }
-  getUsers() {
-    this.service.getUsers(this.type).subscribe((res:any) => {
-      console.log(res);
-      this.users = res
-    })
+  getUserData() {
+    this.credendials.email= this.loginForm.value.email ;
+    this.credendials.password= this.loginForm.value.password
   }
 
   submit() {
-   
-
-    let index = this.users.findIndex(item => item.email == this.loginForm.value.email && item.password == this.loginForm.value.password  )
-    if(index == -1) {
-      this.toaster.error("الايميل او كلمة المرور غير صحيحة" , "" , {
-        disableTimeOut: false,
-        titleClass: "toastr_title",
-        messageClass: "toastr_message",
-        timeOut:5000,
-        closeButton: true,
-      })
-    }else {
-      const model = {
-        displayName:this.users[index].displayName,
-        role:this.type,
-        userId:this.users[index].id
-      }
-      this.service.login(model).subscribe(res => {
-        this.service.user.next(res)
-        this.toaster.success("تم تسجيل الدخول بنجاح" , "" , {
-          disableTimeOut: false,
-          titleClass: "toastr_title",
-          messageClass: "toastr_message",
-          timeOut:5000,
-          closeButton: true,
-        })
-        this.router.navigate(['/subjects'])
-      })
-    }
+    this.getUserData();
+    console.log(this.credendials);
+    this.service.login(this.credendials).subscribe({
+        next:(res)=> {
+          this.service.user.next(res);
+          localStorage.setItem('token', res.token);
+          localStorage.setItem('email', res.email);
+          localStorage.setItem('userName', res.displayName)
+          this.toaster.success("تم تسجيل الدخول بنجاح" , "success");
+          this.router.navigate(['/subjects'])
+        },
+        error:(err)=> {
+          this.toaster.error(err.message , "Error" );
+          console.log(err.message);
+        }
+  })
+    
 
   }
 
 }
+

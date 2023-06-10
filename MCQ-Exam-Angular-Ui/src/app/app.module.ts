@@ -9,6 +9,7 @@ import { DoctorModule } from './doctor/doctor.module';
 import { SharedModule } from './shared/shared.module';
 import { StudentModule } from './student/student.module';
 import { PagesModule } from './pages/pages.module';
+import { ToastrModule } from 'ngx-toastr';
 
 
 @NgModule({
@@ -24,7 +25,13 @@ import { PagesModule } from './pages/pages.module';
     StudentModule,
     PagesModule,
     HttpClientModule,
-    BrowserModule
+    BrowserModule,
+    ToastrModule.forRoot(
+      {
+        positionClass: 'toast-bottom-right',
+        preventDuplicates: true
+      }
+    )
     ],
   providers: [],
   bootstrap: [AppComponent]

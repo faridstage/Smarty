@@ -15,7 +15,7 @@ export class RegisterComponent implements OnInit {
   constructor(private fb:FormBuilder ,private service:AuthService  , private router:Router , private toaster:ToastrService) { }
   ngOnInit(): void {
     this.createForm()
-    this.getStudents()
+    // this.getStudents()
   }
 
   createForm() {
@@ -28,11 +28,11 @@ export class RegisterComponent implements OnInit {
   }
 
 
-  getStudents() {
-    this.service.getUsers('students').subscribe((res:any) => {
-      this.students = res
-    })
-  }
+  // getStudents() {
+  //   this.service.getUsers('students').subscribe((res:any) => {
+  //     this.students = res
+  //   })
+  // }
   submit() {
     const model = {
       displayName:this.userForm.value.displayName,
